@@ -1,3 +1,5 @@
+package gym.gh.com;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -19,15 +21,15 @@ public class ExerciseCreator {
     }
 
     private void looseWeightAdd(){
-        looseWeight.add(SimulatorEntity.SimulstorName.FITNES_CYCLE);
-        looseWeight.add(SimulatorEntity.SimulstorName.STEP_MACHINE);
-        looseWeight.add(SimulatorEntity.SimulstorName.HOOP);
-        looseWeight.add(SimulatorEntity.SimulstorName.TREADMILL);
+        looseWeight.add(SimulatorEntity.SimulatorName.FITNES_CYCLE);
+        looseWeight.add(SimulatorEntity.SimulatorName.STEP_MACHINE);
+        looseWeight.add(SimulatorEntity.SimulatorName.HOOP);
+        looseWeight.add(SimulatorEntity.SimulatorName.TREADMILL);
     }
 
     private void createMusclesAdd(){
-        createMuscles.add(SimulatorEntity.SimulstorName.CROSS_BAR);
-        createMuscles.add(SimulatorEntity.SimulstorName.DUMP_BELLS);
+        createMuscles.add(SimulatorEntity.SimulatorName.CROSS_BAR);
+        createMuscles.add(SimulatorEntity.SimulatorName.DUMP_BELLS);
     }
 
     private int ranDig(int ran){
@@ -37,15 +39,15 @@ public class ExerciseCreator {
     }
 
     private void createEx(){
-        for (Iterator<SimulatorEntity.SimulstorName> it = looseWeight.iterator(); it.hasNext(); ) {
-            SimulatorEntity.SimulstorName simulstorName = it.next();
-            simulatorEntity = new SimulatorEntity(simulstorName, loseW, ranDig(30));
+        for (Iterator<SimulatorEntity.SimulatorName> it = looseWeight.iterator(); it.hasNext(); ) {
+            SimulatorEntity.SimulatorName simulatorName = it.next();
+            simulatorEntity = new SimulatorEntity(simulatorName, loseW, ranDig(30));
             allEx.add(simulatorEntity);
         }
 
-        for (Iterator<SimulatorEntity.SimulstorName> it = createMuscles.iterator(); it.hasNext(); ) {
-            SimulatorEntity.SimulstorName simulstorName = it.next();
-            simulatorEntity = new SimulatorEntity(simulstorName, createMuscels, ranDig(25));
+        for (Iterator<SimulatorEntity.SimulatorName> it = createMuscles.iterator(); it.hasNext(); ) {
+            SimulatorEntity.SimulatorName simulatorName = it.next();
+            simulatorEntity = new SimulatorEntity(simulatorName, createMuscels, ranDig(25));
             allEx.add(simulatorEntity);
         }
     }
@@ -59,7 +61,7 @@ public class ExerciseCreator {
     }
 
     private void printBouqetList(SimulatorEntity simulatorEntity){
-        System.out.print("Simulator: > " + simulatorEntity.getSimulstorName());
+        System.out.print("Simulator: > " + simulatorEntity.getSimulatorName());
         System.out.print(" ||_Exersice type: > " + simulatorEntity.getExercise());
         System.out.print(" ||_time: > " + simulatorEntity.getTime()  + " min");
         System.out.println();

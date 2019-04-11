@@ -1,3 +1,5 @@
+package gym.gh.com;
+
 public class Gym {
     public static void main(String[] args) {
 
