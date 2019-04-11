@@ -20,6 +20,7 @@ public class ExerciseCreator {
         createEx();
     }
 
+    //add lose weight simulators to base
     private void looseWeightAdd(){
         looseWeight.add(SimulatorEntity.SimulatorName.FITNES_CYCLE);
         looseWeight.add(SimulatorEntity.SimulatorName.STEP_MACHINE);
@@ -27,6 +28,7 @@ public class ExerciseCreator {
         looseWeight.add(SimulatorEntity.SimulatorName.TREADMILL);
     }
 
+    //add muscles simulators to base
     private void createMusclesAdd(){
         createMuscles.add(SimulatorEntity.SimulatorName.CROSS_BAR);
         createMuscles.add(SimulatorEntity.SimulatorName.DUMP_BELLS);
@@ -38,6 +40,7 @@ public class ExerciseCreator {
         return digit;
     }
 
+    //add all data to listDb
     private void createEx(){
         for (Iterator<SimulatorEntity.SimulatorName> it = looseWeight.iterator(); it.hasNext(); ) {
             SimulatorEntity.SimulatorName simulatorName = it.next();
@@ -53,7 +56,6 @@ public class ExerciseCreator {
     }
 
     public void showAllExercise(){
-        //sortItemList();
         for (Iterator<SimulatorEntity> it = allEx.iterator(); it.hasNext(); ) {
             SimulatorEntity simulatorEntity = it.next();
             printBouqetList(simulatorEntity);

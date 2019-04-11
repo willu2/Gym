@@ -2,6 +2,7 @@ package gym.gh.com;
 
 import java.util.Random;
 
+/*item entity class*/
 public class SimulatorEntity implements Comparable<SimulatorEntity>{
 
     enum SimulatorName {
